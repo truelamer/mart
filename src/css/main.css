@@ -1,0 +1,63 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex-container, header, header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.small-text {
+  font-size: 14px;
+  color: white;
+}
+
+header {
+  height: 45px;
+}
+
+header .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 13px;
+}
+
+header .container .header-left-part .header-phone {
+  margin-right: 29px;
+}
+
+header .container .header-right-part a {
+  margin-left: 29px;
+  text-decoration: unset;
+}
+
+header .container .header-right-part a:hover {
+  text-decoration: underline;
+}
+
+header .container .header-right-part a:first-child {
+  margin-left: 0;
+}
+
+header {
+  background-color: #4ec6ab;
+}
+
+body {
+  background-image: url("../../mart.jpg");
+  background-size: 1480px auto;
+  background-position-x: center;
+}
+/*# sourceMappingURL=main.css.map */

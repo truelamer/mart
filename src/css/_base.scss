@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bold {
+    font-family: 'Open Sans Bold', sans-serif;
+}
+
+h2 {
+    @extend .bold;
+    color: $secondary-color-light;
+    text-transform: uppercase;
+    font-size: 42px;
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.column-container {
+    flex-direction: column;
+}
+
+.container {
+    @extend .flex-container;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.small-text {
+    font-size: $small-text-size;
+    color: $secondary-color;
+}
+
+header {
+    height: 45px;
+}
