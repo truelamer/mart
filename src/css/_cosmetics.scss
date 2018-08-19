@@ -1,20 +1,5 @@
 header {
-    background-color: $primary-color;
-
-    .small-text {
-        color: white;
-    }
-}
-.navigation {
-    a.common-text {
-        text-transform: uppercase;
-        color: $secondary-color;
-        font-size: $small-text-size;
-    }
-    .search-cart {
-        text-transform: uppercase;
-        color: $secondary-color;
-    }
+    background-color: white;
 }
 .advantages {
     .advantage {
@@ -39,26 +24,12 @@ header {
     background-color: $primary-color;
 }
 .new-collection {
-    background-color: aliceblue;
+    //background-color: aliceblue;
 }
 .product-item {
     .product-image-actions {
         opacity: 0;
         transition: opacity 400ms;
-        i {
-            color: aliceblue;
-        }
-    }
-    .product-new {
-        text-transform: uppercase;        
-    }
-    .product-sale {
-        text-transform: uppercase;
-    }
-    .product-image-action-to-cart {
-        text-transform: uppercase;
-        font-size: 14px;    
-        color: aliceblue;
     }
     .product-button {
         background-color: transparent;
@@ -68,39 +39,11 @@ header {
             background-color: $primary-color;
         }
     }
-    .product-title {
-        background-color: $secondary-color;
-    }
-    .product-price {
-        background-color: $secondary-color-light;
-    }
 
     &:hover {
         .product-image-actions {
             opacity: 1;
             background-color: rgba(0, 0, 0, 0.5);
-        }
-        .product-title {
-            background-color: $primary-color;
-        }
-        .product-price {
-            background-color: $primary-color-light;
-        }
-    }
-}
-
-.featured-products {
-    background-color: white;
-
-    .categorie {
-        background-color: transparent;
-        border: 1px solid $secondary-color-light;
-        color: $secondary-color-light;
-        text-transform: uppercase;
-    
-        &:hover {
-            background-color: $primary-color;
-            color: aliceblue;
         }
     }
 }

@@ -12,7 +12,7 @@ h2 {
   letter-spacing: -2px;
   margin: 0; }
 
-.flex-container, .container, header, header .container, .navigation, .navigation nav, .navigation .searh-cart, .new-collection .products, .featured-products .products, .new-collection .products .product-image-with-hover .product-image-actions, .featured-products .products .product-image-with-hover .product-image-actions, .new-collection .products .product-image-with-hover .product-button, .featured-products .products .product-image-with-hover .product-button, .new-collection .products .product-title-and-price, .featured-products .products .product-title-and-price, .new-collection .products .product-title-and-price .product-title, .featured-products .products .product-title-and-price .product-title, .new-collection .products .product-title-and-price .product-price, .featured-products .products .product-title-and-price .product-price {
+.flex-container, .container, header, header .container, .new-collection .products, .new-collection .products .product-image-with-hover .product-image-actions, .new-collection .products .product-image-with-hover .product-button, .new-collection .products .product-title-and-price {
   display: flex;
   align-items: center; }
 
@@ -45,18 +45,7 @@ header .container {
       margin-left: 0; }
 
 .navigation {
-  justify-content: space-between;
   height: 83px; }
-  .navigation .navigation-container-img {
-    padding-top: 3px;
-    padding-left: 9px; }
-  .navigation nav {
-    margin-top: 4px; }
-    .navigation nav a.common-text {
-      margin-right: 24px;
-      text-decoration: unset; }
-      .navigation nav a.common-text:hover {
-        text-decoration: underline; }
 
 .carousel {
   height: 554px; }
@@ -83,34 +72,23 @@ header .container {
       height: 2px;
       margin: 0; }
 
-.new-collection, .featured-products {
+.new-collection {
   height: 622px;
   padding: 84px 0; }
-  .new-collection .products, .featured-products .products {
+  .new-collection .products {
     justify-content: space-between;
     width: 100%;
     padding: 0 10px; }
-    .new-collection .products .product-item, .featured-products .products .product-item {
+    .new-collection .products .product-item {
       width: 236px; }
-    .new-collection .products .product-image-with-hover, .featured-products .products .product-image-with-hover {
+    .new-collection .products .product-image-with-hover {
       position: relative;
       height: 262px; }
-      .new-collection .products .product-image-with-hover .product-new, .featured-products .products .product-image-with-hover .product-new {
-        position: absolute;
-        border: 1px solid #212529;
-        padding: 5px 10px;
-        top: 12px;
-        left: 12px; }
-      .new-collection .products .product-image-with-hover .product-sale, .featured-products .products .product-image-with-hover .product-sale {
-        position: absolute;
-        border: 1px solid #212529;
-        padding: 5px 10px;
-        top: 12px;
-        right: 12px; }
-      .new-collection .products .product-image-with-hover .product-image, .featured-products .products .product-image-with-hover .product-image {
+      .new-collection .products .product-image-with-hover .product-image {
         width: 100%;
-        height: 100%; }
-      .new-collection .products .product-image-with-hover .product-image-actions, .featured-products .products .product-image-with-hover .product-image-actions {
+        height: 100%;
+        background-color: #cd00cd; }
+      .new-collection .products .product-image-with-hover .product-image-actions {
         position: absolute;
         top: 10px;
         bottom: 10px;
@@ -119,51 +97,16 @@ header .container {
         justify-content: center;
         flex-wrap: wrap;
         align-content: center; }
-      .new-collection .products .product-image-with-hover .product-button, .featured-products .products .product-image-with-hover .product-button {
-        justify-content: space-around;
+      .new-collection .products .product-image-with-hover .product-button {
+        justify-content: center;
         width: 50px;
         height: 50px;
         margin: 2px; }
-        .new-collection .products .product-image-with-hover .product-button.wide, .featured-products .products .product-image-with-hover .product-button.wide {
+        .new-collection .products .product-image-with-hover .product-button.wide {
           width: 156px; }
-    .new-collection .products .product-title-and-price, .featured-products .products .product-title-and-price {
-      height: 36px;
-      color: aliceblue;
-      text-transform: uppercase;
-      font-size: 16px; }
-      .new-collection .products .product-title-and-price .product-title, .featured-products .products .product-title-and-price .product-title {
-        width: 186px;
-        height: 100%;
-        padding-left: 11px; }
-      .new-collection .products .product-title-and-price .product-price, .featured-products .products .product-title-and-price .product-price {
-        width: 50px;
-        height: 100%;
-        justify-content: center; }
-
-.featured-products {
-  height: 1079px; }
-  .featured-products .categorie {
-    margin-top: 8px;
-    margin-bottom: 70px;
-    margin: 8px 6px 70px 6px;
-    font-size: 16px;
-    height: 26px; }
-  .featured-products .product {
-    margin-top: 28px; }
 
 header {
-  background-color: #1abc9c; }
-  header .small-text {
-    color: white; }
-
-.navigation a.common-text {
-  text-transform: uppercase;
-  color: #212529;
-  font-size: 13px; }
-
-.navigation .search-cart {
-  text-transform: uppercase;
-  color: #212529; }
+  background-color: white; }
 
 .advantages .advantage:hover .advantage-icon, .advantages .advantage:hover .advantage-title {
   color: #1abc9c; }
@@ -181,25 +124,9 @@ header {
 .stripe {
   background-color: #1abc9c; }
 
-.new-collection, .featured-products {
-  background-color: aliceblue; }
-
 .product-item .product-image-actions {
   opacity: 0;
   transition: opacity 400ms; }
-  .product-item .product-image-actions i {
-    color: aliceblue; }
-
-.product-item .product-new {
-  text-transform: uppercase; }
-
-.product-item .product-sale {
-  text-transform: uppercase; }
-
-.product-item .product-image-action-to-cart {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: aliceblue; }
 
 .product-item .product-button {
   background-color: transparent;
@@ -207,33 +134,71 @@ header {
   .product-item .product-button:hover {
     background-color: #1abc9c; }
 
-.product-item .product-title {
-  background-color: #212529; }
-
-.product-item .product-price {
-  background-color: #434b53; }
-
 .product-item:hover .product-image-actions {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5); }
 
-.product-item:hover .product-title {
-  background-color: #1abc9c; }
-
-.product-item:hover .product-price {
-  background-color: #3ee4c4; }
-
-.featured-products {
-  background-color: white; }
-  .featured-products .categorie {
-    background-color: transparent;
-    border: 1px solid #434b53;
-    color: #434b53;
-    text-transform: uppercase; }
-    .featured-products .categorie:hover {
-      background-color: #1abc9c;
-      color: aliceblue; }
-
 body {
   background-size: 1480px auto;
   background-position-x: center; }
+
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  background-color: #1abc9c; }
+  .carousel-button:hover {
+    background-color: #3ee4c4; }
+
+.frame {
+  width: 100%;
+  height: 100%; }
+
+.carousel {
+  position: relative; }
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; }
+
+.carousel-button-left {
+  left: 0; }
+
+.carousel-button-right {
+  right: 0; }
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0; }
+
+.first {
+  background-color: red;
+  transition: margin 0.4s; }
+
+.second {
+  background-color: orangered; }
+
+.third {
+  background-color: yellow; }
+
+.fourth {
+  background-color: green; }
+
+.fifth {
+  background-color: skyblue; }
+
+.sixth {
+  background-color: blue; }
+
+.seventh {
+  background-color: purple; }
+
+#carousel-with-margin {
+  overflow: hidden; }
+
+#carousel-with-transform .frame {
+  overflow: hidden; }
+  #carousel-with-transform .frame .slides-container {
+    transition: transform 0.4s; }
