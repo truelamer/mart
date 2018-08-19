@@ -26,13 +26,93 @@ header {
 }
 
 .navigation {
+    @extend .flex-container;
+    justify-content: space-between;
     height: 83px;
+    .navigation-container-img {
+        padding-top: 3px;
+        padding-left: 9px;
+    }
+    nav {
+       @extend .flex-container; 
+       margin-top: 4px;
+       a.common-text {
+            margin-right: 24px;        
+            text-decoration: unset;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }   
 
+    .searh-cart {
+        @extend .flex-container;
+        }
 }
 
 .carousel {
+    position: relative;
+    overflow: hidden;
     height: 554px;
+
+    .carousel-button {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $primary-color;
+        color: aliceblue;
+        border: none;
+        font-size: 28px;
+        &:hover {
+            background-color: $primary-color-light;
+        }
+    }
+    .carousel-button-left {
+        left: 0;
+    }
+    
+    .carousel-button-right {
+        right: 0;
+    }
+
+    .frame {
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-image {
+        width: 100%;
+        height: 100%;    
+        flex-shrink: 0;
+        // background-image: url();
+        // background-position: center;
+        // background-repeat: no-repeat;
+    }
+    .first {
+       background-color: red;
+       transition: margin 0.4s;
+    }
+    .second {
+       background-color: orangered;
+    }
+    .third {
+        background-color: yellow;
+    }
+    .fourth {
+        background-color: green;
+    }
+    .fifth {
+        background-color: skyblue;
+    }
+    .sixth {
+        background-color: blue;
+    }
+    .seventh {
+       background-color: purple;
+    }
 }
+
 
 .advantages {
     padding-top: 90px;
@@ -82,11 +162,25 @@ header {
         .product-image-with-hover {
             position: relative;
             height: 262px;
-
+            .product-new {
+                position: absolute;
+                border: 1px solid $secondary-color;
+                padding: 5px 10px;
+                top: 12px;
+                left: 12px;
+            }
+            .product-sale {
+                position: absolute;
+                border: 1px solid $secondary-color;
+                padding: 5px 10px;
+                top: 12px;
+                right: 12px;
+            }
+                            
             .product-image {
                 width: 100%;
                 height: 100%;
-                background-color: lighten(purple, 15%);
+                
             }
 
             .product-image-actions {
@@ -103,7 +197,7 @@ header {
 
             .product-button {
                 @extend .flex-container;
-                justify-content: center;
+                justify-content: space-around;
                 width: 50px;
                 height: 50px;
                 margin: 2px;
@@ -111,11 +205,153 @@ header {
                 &.wide {
                     width: 156px;
                 }
-            }
+            }            
         }
 
         .product-title-and-price {
             @extend .flex-container;
+            height: 36px;
+            color: aliceblue;
+            text-transform: uppercase;
+            font-size: 16px;    
+            .product-title {                
+                width: 186px;
+                height: 100%;
+                padding-left: 11px; 
+                @extend .flex-container;
+            }
+            .product-price {
+                width: 50px;
+                height: 100%;
+                @extend .flex-container;
+                justify-content: center;
+            }
         }
     }
+}
+.featured-products {
+    @extend .new-collection;
+    height: 1079px;
+    .categorie {
+        margin-top: 8px;
+        margin-bottom: 70px;
+        margin: 8px 6px 70px 6px;
+        font-size: 16px;
+        height: 26px;
+    }
+    .product {
+        margin-top: 28px;
+    }
+}
+
+.promo {
+    @extend .flex-container;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('/web/mart/src/img/promo-img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 373px;
+    .promo-header {
+        color: aliceblue;
+        text-transform: uppercase;
+        font-size: 55px;
+        font-weight: 900;
+        padding-top: 21px;
+    }
+    .promo-text {
+        color: aliceblue;
+        font-size: 31px;
+    }
+}
+
+.best-sellers {
+    @extend .new-collection;
+}
+
+.customer-review {
+    height: 767px;
+    padding: 89px 0;
+    background-color: white;
+    .customer-review-photo {
+        img {
+            width: 210px;
+            border-radius: 50%;
+        }        
+    }
+    .customer-review-text {
+        margin-top: 15px;
+        width: 720px;
+        line-height: 1.4;
+    }
+    .customer-review-info {
+        @extend .flex-container;
+        flex-direction: column;
+        margin-top: 21px;
+        .customer-review-info-name {
+            color: $primary-color;
+        }
+    }
+    .customer-review-choose{
+        @extend .flex-container;
+        flex-direction: row;
+        img {
+            width: 80px;
+            border-radius: 50%;
+            border: #212529 solid 5px;
+            margin-right: 9px;
+            margin-top: 20;
+        }     
+    }
+}
+
+.newsletter {
+    @extend .new-collection;
+    height: 428px;
+    background-image: url("/web/mart/src/img/newsletter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    .stripe {
+        background-color: white;
+    }
+    .green-stripes {
+        margin-bottom: 29px;
+    }
+    .follow-text {
+        color: white;
+    }
+    .input-email {
+        position: relative;
+        width: 502px;
+        margin-top: 37px;
+        input {
+            width: 100%;
+            height: 57px;
+            padding-left: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            outline: none;
+            background: white;
+            color: $secondary-color;
+        }
+        button {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            width: 85px;
+            height: 57px;
+            border: none;
+            background: $primary-color;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            &:before {        
+                content: "\f105 \f105";
+                font-family: FontAwesome;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+
 }
