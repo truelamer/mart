@@ -1,11 +1,24 @@
 let currentSlide = 0;
 let currentMargin = 0;
-    function animateWithMargin(direction) {
-        if (currentSlide === 0 && direction < 0 || currentSlide === 6 && direction > 0) {
-        return false;
+function animateWithMargin(direction) 
+{
+    if (currentSlide === 6 && direction > 0)
+    {
+        currentSlide = 0;
+        currentMargin = -currentSlide * 100;
+        $('#carousel-with-margin .first').css('margin-left', currentMargin + '%');    
     }
-    currentSlide += direction;
-    currentMargin = -currentSlide * 100;
+    else if (currentSlide === 0 && direction < 0)
+    {
+        currentSlide = 6;
+        currentMargin = -currentSlide * 100;
+        $('#carousel-with-margin .first').css('margin-left', currentMargin + '%');    
+    }      
+    else 
+    {
+        currentSlide += direction;
+        currentMargin = -currentSlide * 100;
+    }
     $('#carousel-with-margin .first').css('margin-left', currentMargin + '%');
 }
 let carousel = document.getElementById('carousel-with-margin');
