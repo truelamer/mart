@@ -20,6 +20,7 @@ function animateWithMargin(direction)
         currentMargin = -currentSlide * 100;
     }
     $('#carousel-with-margin .first').css('margin-left', currentMargin + '%');
+    
 }
 let carousel = document.getElementById('carousel-with-margin');
 carousel.children[0].addEventListener('click', function() { animateWithMargin(-1) });

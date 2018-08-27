@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="dist/main.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     </head>
-    <body style="background-image: url('mart.jpg');">
+    <!-- <body style="background-image: url('mart.jpg');"> -->
+    <body>
         <header>
             <div class="container">
                 <div class="header-left-part flex-container">
@@ -42,6 +43,8 @@
             <div class="search-cart">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <span class="cart">Cart - $0 </span>
+                <span class="bag"><img class="img-bag" src="src/img/bag.png" alt="Bag"></span>
+                <span class="bag-count" id="bag-count">0</span>
             </div>
         </section>
         <section class="carousel" id="carousel-with-margin">
@@ -90,7 +93,7 @@
             </div>
         </section>
         <section class="new-collection">
-            <div class="container column-container">
+            <div class="container column-container product-container">
                 <h2>
                     New collection
                 </h2>
@@ -161,10 +164,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="show-more">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Show more</span>
+                </div>
             </div>
         </section>
         <section class="featured-products">
-            <div class="container column-container">
+            <div class="container column-container product-container">
                 <h2>
                     Featured products
                 </h2>
@@ -223,7 +230,6 @@
                                 <button class="product-button"><i class="far fa-clock"></i></button>
                                 <button class="product-button wide"><i class="fas fa-cart-plus"></i><span class="product-image-action-to-cart">Add to cart</span></button>
                             </div>
-
                         </div>
                         <div class="product-title-and-price">
                             <div class="product-title">Blue tshirt</div>
@@ -308,6 +314,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="show-more">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Show more</span>
+                </div>
             </div>  
         </section>
         <section class="promo">
@@ -315,7 +325,7 @@
             <div class="promo-text">Up to 35% off Women's Denim</div>
         </section>
         <section class="best-sellers">
-            <div class="container column-container">
+            <div class="container column-container product-container">
                 <h2>
                     Best sellers
                 </h2>
@@ -385,6 +395,10 @@
                             <div class="product-price">$26</div>
                         </div>
                     </div>
+                </div>
+                <div class="show-more">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Show more</span>
                 </div>
             </div>
         </section>

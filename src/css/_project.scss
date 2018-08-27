@@ -38,9 +38,10 @@ header {
        width: 419px;
        margin-top: 4px;
        a.common-text {
-            margin-right: 29px;     
+            margin-left: 25px;  
             text-decoration: unset;
             flex-shrink: 0;
+            font-weight: 800;
             &:hover {
                 text-decoration: underline;
             }
@@ -50,9 +51,26 @@ header {
         }
     }   
 
-    .searh-cart {
+    .search-cart {
         @extend .flex-container;
+        position: relative;
+        .cart {
+            margin-left: 20px;
         }
+        .bag {
+            margin-left: 10px;
+        }
+        .img-bag {
+            height: 26px;
+            margin-top: -7px;
+        }
+        .bag-count {
+            position: absolute;
+            right: 10px;
+            color: $primary-color;
+
+        }
+    }
 }
 
 .carousel {
@@ -96,7 +114,6 @@ header {
     }
     .first {
         background-image: url("/mart/src/img/1.png");
-        transition: margin 0.4s;
     }
     .second {
         background-image: url("/mart/src/img/2.png");
@@ -151,7 +168,6 @@ header {
     }
 }
 .new-collection {    
-    height: 622px;
     padding: 84px 0;
 
     .products {
@@ -210,7 +226,7 @@ header {
                 &.wide {
                     width: 156px;
                 }
-            }            
+            }             
         }
 
         .product-title-and-price {
@@ -231,12 +247,17 @@ header {
                 @extend .flex-container;
                 justify-content: center;
             }
-        }
+        }         
     }
+    .show-more {
+        font-size: 25px;
+        margin-top: 15px;
+        color: $primary-color;
+        cursor: pointer;
+    }          
 }
 .featured-products {
     @extend .new-collection;
-    height: 1079px;
     .categorie {
         margin-top: 8px;
         margin-bottom: 70px;

@@ -1,3 +1,4 @@
-import './js/rainbows.js';
-import './js/unicorns.js';
+import './js/rainbow.js';
+import './js/add-to-cart.js';
+import './js/show-more-products.js';
 import './css/main.scss';
