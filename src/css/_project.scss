@@ -66,7 +66,7 @@ header {
         }
         .bag-count {
             position: absolute;
-            right: 10px;
+            right: 8px;
             color: $primary-color;
 
         }
@@ -113,25 +113,25 @@ header {
         background-size: cover;
     }
     .first {
-        background-image: url("/mart/src/img/1.png");
+        background-image: url("../img/1.png");
     }
     .second {
-        background-image: url("/mart/src/img/2.png");
+        background-image: url("../img/2.png");
     }
     .third {
-        background-image: url("/mart/src/img/3.png");
+        background-image: url("../img/3.png");
     }
     .fourth {
-        background-image: url("/mart/src/img/4.png");
+        background-image: url("../img/4.png");
     }
     .fifth {
-        background-image: url("/mart/src/img/5.png");
+        background-image: url("../img/5.png");
     }
     .sixth {
-        background-image: url("/mart/src/img/6.png");
+        background-image: url("../img/6.png");
     }
     .seventh {
-        background-image: url("/mart/src/img/7.png");
+        background-image: url("../img/7.png");
     }
 }
 
@@ -274,7 +274,7 @@ header {
     @extend .flex-container;
     justify-content: center;
     flex-direction: column;
-    background-image: url('/mart/src/img/promo-img.png');
+    background-image: url('../img/promo-img.png');
     background-position: center;
     background-repeat: no-repeat;
     height: 373px;
@@ -339,7 +339,7 @@ header {
 .newsletter {
     @extend .new-collection;
     height: 428px;
-    background-image: url("/mart/src/img/newsletter.png");
+    background-image: url("../img/newsletter.png");
     background-position: center;
     background-repeat: no-repeat;
     .stripe {
@@ -444,7 +444,7 @@ header {
 
 .contacts {
     @extend .new-collection;
-    background-image: url("/mart/src/img/map.png");
+    background-image: url("../img/map.png");
     background-position: center;
     background-repeat: no-repeat;
 
