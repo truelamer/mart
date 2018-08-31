@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     </head>
     <!-- <body style="background-image: url('mart.jpg');"> -->
-    <body>
+    <body   >
         <header>
             <div class="container">
                 <div class="header-left-part flex-container">
@@ -43,8 +43,11 @@
             <div class="search-cart">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <span class="cart">Cart - $0 </span>
-                <span class="bag"><img class="img-bag" src="src/img/bag.png" alt="Bag"></span>
-                <span class="bag-count" id="bag-count">0</span>
+                <span class="bag">
+                    <img class="img-bag" src="src/img/bag.png" alt="Bag">
+                    <span class="bag-count" id="bag-count">0</span>
+                </span>
+                
             </div>
         </section>
         <section class="carousel" id="carousel-with-margin">
@@ -181,10 +184,23 @@
                     <div class="stripe thin-stripe"></div>
                 </div>
                 <div class="feautered-products-categories flex-container">
-                    <button class="categorie">All</button>
-                    <button class="categorie">Dresses and suits</button>
-                    <button class="categorie">Accessories</button>
-                    <button class="categorie">Miscellaneous</button>        
+                    <span class="categorie-with-count">
+                        <button class="categorie">All</button>
+                        <span class="categorie-count">12</span>
+                    </span>
+                    <span class="categorie-with-count">     
+                        <button class="categorie">Dresses and suits</button>
+                        <span class="categorie-count">12</span>
+                    </span>
+                    <span class="categorie-with-count">
+                        <button class="categorie">Accessories</button>
+                        <span class="categorie-count">12</span>
+                    </span>
+                    <span class="categorie-with-count">
+                        <button class="categorie">Miscellaneous</button>     
+                        <span class="categorie-count">12</span>  
+                    </span>
+                     
                 </div>
                 <div class="products">
                     <div class="product-item">
@@ -550,6 +566,7 @@
                             <div class="social-href"><i class="fab fa-github"></i></div>
                         </div>
                     </div>
+                    <!--
                     <div class="right-side">
                         <input type="text" placeholder="Your Name" class="name with-margin">
                         <input type="text" placeholder="Your Email" class="email">
@@ -557,7 +574,16 @@
                         <input type="text" placeholder="Website URL" class="website">
                         <textarea placeholder="Your Message..." class="message"></textarea>
                         <button class="send-form">Send</button>
-                    </div>                
+                    </div>
+                    -->     
+                    <div class="right-side-grid">
+                            <input type="text" placeholder="Your Name" class="name">
+                            <input type="text" placeholder="Your Email" class="email">
+                            <input type="text" placeholder="Subject" class="subject">
+                            <input type="text" placeholder="Website URL" class="website">
+                            <textarea placeholder="Your Message..." class="message"></textarea>
+                            <button class="send-form">Send</button>
+                        </div>           
                 </div>
             </div>
         </section>

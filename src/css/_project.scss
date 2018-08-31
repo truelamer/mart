@@ -58,17 +58,19 @@ header {
             margin-left: 20px;
         }
         .bag {
-            margin-left: 10px;
+            @extend .flex-container;
+            margin-left: 17px;
+            position: relative;
+            justify-content: center;
         }
         .img-bag {
             height: 26px;
-            margin-top: -7px;
+            margin-top: -4px;
+            position: absolute;
         }
         .bag-count {
             position: absolute;
-            right: 8px;
             color: $primary-color;
-
         }
     }
 }
@@ -114,6 +116,7 @@ header {
     }
     .first {
         background-image: url("../img/1.png");
+        transition: margin 0.4s;
     }
     .second {
         background-image: url("../img/2.png");
@@ -222,6 +225,7 @@ header {
                 width: 50px;
                 height: 50px;
                 margin: 2px;
+                outline-color: white;
 
                 &.wide {
                     width: 156px;
@@ -257,17 +261,40 @@ header {
     }          
 }
 .featured-products {
-    @extend .new-collection;
-    .categorie {
-        margin-top: 8px;
+    .feautered-products-categories {
         margin-bottom: 70px;
-        margin: 8px 6px 70px 6px;
-        font-size: 16px;
-        height: 26px;
     }
-    .product {
-        margin-top: 28px;
+    @extend .new-collection;
+    .categorie-with-count {
+        @extend .flex-container;
+        justify-content: flex-end;
+        position: relative;
+        .categorie {
+            margin: 8px 6px 0px 6px;
+            font-size: 16px;
+            height: 26px;
+            border-radius: 3px;
+            &:hover {
+                border-color: $primary-color;
+            }
+        }
+        .categorie-count {
+            position: absolute;
+            top: -16px;
+            width: 30px;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
     }
+    
+    .products {
+        margin-top: 10px;
+    }    
 }
 
 .promo {
@@ -405,10 +432,6 @@ header {
     padding: 84px 0;
     background-color: white;
 
-    .news {
-        padding-Left: 10px;
-    }
-
     .news-pic {
         img {
             width: 335px;
@@ -505,6 +528,10 @@ header {
         margin-right: 9px;
         color: white;
         justify-content: center;
+        &:hover {
+            background-color: $primary-color;
+            border: none;
+        }
     }
 
     .right-side {
@@ -516,10 +543,23 @@ header {
     input {
         background: none;
         border: 1px solid white;
-        width: 236px;
+        //width: 236px;
         height: 48px;
         color: white;
-        margin-bottom: 26px;
+        //margin-bottom: 26px;
+        outline-color: $primary-color;
+        color: $primary-color;
+        padding: 10px;
+        &::placeholder {
+            color: white;
+            &:active {
+                color: $primary-color;
+            }
+        }
+        &:focus::placeholder {
+            color: $primary-color;
+        }
+       
     }
 
     .with-margin {
@@ -529,9 +569,23 @@ header {
     textarea {
         background: none;
         border: 1px solid white;
-        width: 498px;
+        //width: 498px;
         height: 111px;
-        margin-bottom: 28px;
+        //margin-bottom: 26px;
+        outline-color: $primary-color;
+        color: $primary-color;
+        padding: 10px;
+        resize: none;
+        &::placeholder {
+            color: white;
+            &:active {
+                color: $primary-color;
+            }
+        }
+        &:focus::placeholder {
+            color: $primary-color;
+        }
+        
     }
 
     .send-form {
@@ -540,5 +594,43 @@ header {
         background-color: $primary-color;
         color: white;
         border: none;
+    }
+
+    .name {
+        grid-area: name;
+    }
+
+    .email {
+        grid-area: email;
+    }
+
+    .subject {
+        grid-area: subject;
+    }
+
+    .website {
+        grid-area: url;
+    }
+
+    .message {
+        grid-area: message;
+    }
+
+    .send-form {
+        grid-area: send;
+    }
+
+    .right-side-grid {
+        display: grid;
+        width: 535px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-column-gap: 23px;
+        grid-row-gap: 26px;
+        grid-template-areas: 
+            "name email"
+            "subject url"
+            "message message"
+            "send .";
     }
 }

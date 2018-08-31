@@ -63,3 +63,5 @@ typings/
 .gitattributes
 dist/bundle.js
 dist/main.css
+*.iml
+*.xml

@@ -12,7 +12,7 @@ h2 {
   letter-spacing: -2px;
   margin: 0; }
 
-.flex-container, .container, header, header .container, .navigation, .navigation nav, .navigation .search-cart, .new-collection .products, .featured-products .products, .best-sellers .products, .newsletter .products, .partners .products, .contacts .products, .new-collection .products .product-image-with-hover .product-image-actions, .featured-products .products .product-image-with-hover .product-image-actions, .best-sellers .products .product-image-with-hover .product-image-actions, .newsletter .products .product-image-with-hover .product-image-actions, .partners .products .product-image-with-hover .product-image-actions, .contacts .products .product-image-with-hover .product-image-actions, .new-collection .products .product-image-with-hover .product-button, .featured-products .products .product-image-with-hover .product-button, .best-sellers .products .product-image-with-hover .product-button, .newsletter .products .product-image-with-hover .product-button, .partners .products .product-image-with-hover .product-button, .contacts .products .product-image-with-hover .product-button, .new-collection .products .product-title-and-price, .featured-products .products .product-title-and-price, .best-sellers .products .product-title-and-price, .newsletter .products .product-title-and-price, .partners .products .product-title-and-price, .contacts .products .product-title-and-price, .new-collection .products .product-title-and-price .product-title, .featured-products .products .product-title-and-price .product-title, .best-sellers .products .product-title-and-price .product-title, .newsletter .products .product-title-and-price .product-title, .partners .products .product-title-and-price .product-title, .contacts .products .product-title-and-price .product-title, .new-collection .products .product-title-and-price .product-price, .featured-products .products .product-title-and-price .product-price, .best-sellers .products .product-title-and-price .product-price, .newsletter .products .product-title-and-price .product-price, .partners .products .product-title-and-price .product-price, .contacts .products .product-title-and-price .product-price, .promo, .customer-review .customer-review-info, .customer-review .customer-review-choose, .contacts .social-href {
+.flex-container, .container, header, header .container, .navigation, .navigation nav, .navigation .search-cart, .navigation .search-cart .bag, .new-collection .products, .featured-products .products, .best-sellers .products, .newsletter .products, .partners .products, .contacts .products, .new-collection .products .product-image-with-hover .product-image-actions, .featured-products .products .product-image-with-hover .product-image-actions, .best-sellers .products .product-image-with-hover .product-image-actions, .newsletter .products .product-image-with-hover .product-image-actions, .partners .products .product-image-with-hover .product-image-actions, .contacts .products .product-image-with-hover .product-image-actions, .new-collection .products .product-image-with-hover .product-button, .featured-products .products .product-image-with-hover .product-button, .best-sellers .products .product-image-with-hover .product-button, .newsletter .products .product-image-with-hover .product-button, .partners .products .product-image-with-hover .product-button, .contacts .products .product-image-with-hover .product-button, .new-collection .products .product-title-and-price, .featured-products .products .product-title-and-price, .best-sellers .products .product-title-and-price, .newsletter .products .product-title-and-price, .partners .products .product-title-and-price, .contacts .products .product-title-and-price, .new-collection .products .product-title-and-price .product-title, .featured-products .products .product-title-and-price .product-title, .best-sellers .products .product-title-and-price .product-title, .newsletter .products .product-title-and-price .product-title, .partners .products .product-title-and-price .product-title, .contacts .products .product-title-and-price .product-title, .new-collection .products .product-title-and-price .product-price, .featured-products .products .product-title-and-price .product-price, .best-sellers .products .product-title-and-price .product-price, .newsletter .products .product-title-and-price .product-price, .partners .products .product-title-and-price .product-price, .contacts .products .product-title-and-price .product-price, .featured-products .categorie-with-count, .promo, .customer-review .customer-review-info, .customer-review .customer-review-choose, .contacts .social-href {
   display: flex;
   align-items: center; }
 
@@ -71,13 +71,15 @@ header .container {
     .navigation .search-cart .cart {
       margin-left: 20px; }
     .navigation .search-cart .bag {
-      margin-left: 10px; }
+      margin-left: 17px;
+      position: relative;
+      justify-content: center; }
     .navigation .search-cart .img-bag {
       height: 26px;
-      margin-top: -7px; }
+      margin-top: -4px;
+      position: absolute; }
     .navigation .search-cart .bag-count {
       position: absolute;
-      right: 8px;
       color: #1abc9c; }
 
 .carousel {
@@ -111,7 +113,8 @@ header .container {
     background-repeat: no-repeat;
     background-size: cover; }
   .carousel .first {
-    background-image: url(src/img/1.png); }
+    background-image: url(src/img/1.png);
+    transition: margin 0.4s; }
   .carousel .second {
     background-image: url(src/img/2.png); }
   .carousel .third {
@@ -186,7 +189,8 @@ header .container {
         justify-content: space-around;
         width: 50px;
         height: 50px;
-        margin: 2px; }
+        margin: 2px;
+        outline-color: white; }
         .new-collection .products .product-image-with-hover .product-button.wide, .featured-products .products .product-image-with-hover .product-button.wide, .best-sellers .products .product-image-with-hover .product-button.wide, .newsletter .products .product-image-with-hover .product-button.wide, .partners .products .product-image-with-hover .product-button.wide, .contacts .products .product-image-with-hover .product-button.wide {
           width: 156px; }
     .new-collection .products .product-title-and-price, .featured-products .products .product-title-and-price, .best-sellers .products .product-title-and-price, .newsletter .products .product-title-and-price, .partners .products .product-title-and-price, .contacts .products .product-title-and-price {
@@ -208,15 +212,33 @@ header .container {
     color: #1abc9c;
     cursor: pointer; }
 
-.featured-products .categorie {
-  margin-top: 8px;
-  margin-bottom: 70px;
-  margin: 8px 6px 70px 6px;
-  font-size: 16px;
-  height: 26px; }
+.featured-products .feautered-products-categories {
+  margin-bottom: 70px; }
 
-.featured-products .product {
-  margin-top: 28px; }
+.featured-products .categorie-with-count {
+  justify-content: flex-end;
+  position: relative; }
+  .featured-products .categorie-with-count .categorie {
+    margin: 8px 6px 0px 6px;
+    font-size: 16px;
+    height: 26px;
+    border-radius: 3px; }
+    .featured-products .categorie-with-count .categorie:hover {
+      border-color: #1abc9c; }
+  .featured-products .categorie-with-count .categorie-count {
+    position: absolute;
+    top: -16px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; }
+
+.featured-products .products {
+  margin-top: 10px; }
 
 .promo {
   justify-content: center;
@@ -318,8 +340,6 @@ header .container {
   height: 767px;
   padding: 84px 0;
   background-color: white; }
-  .latest-news .news {
-    padding-Left: 10px; }
   .latest-news .news-pic img {
     width: 335px;
     height: 240px; }
@@ -384,6 +404,9 @@ header .container {
     margin-right: 9px;
     color: white;
     justify-content: center; }
+    .contacts .social-href:hover {
+      background-color: #1abc9c;
+      border: none; }
   .contacts .right-side {
     align-self: flex-start;
     padding-top: 9px;
@@ -391,24 +414,59 @@ header .container {
   .contacts input {
     background: none;
     border: 1px solid white;
-    width: 236px;
     height: 48px;
     color: white;
-    margin-bottom: 26px; }
+    outline-color: #1abc9c;
+    color: #1abc9c;
+    padding: 10px; }
+    .contacts input::placeholder {
+      color: white; }
+      .contacts input::placeholder:active {
+        color: #1abc9c; }
+    .contacts input:focus::placeholder {
+      color: #1abc9c; }
   .contacts .with-margin {
     margin-right: 23px; }
   .contacts textarea {
     background: none;
     border: 1px solid white;
-    width: 498px;
     height: 111px;
-    margin-bottom: 28px; }
+    outline-color: #1abc9c;
+    color: #1abc9c;
+    padding: 10px;
+    resize: none; }
+    .contacts textarea::placeholder {
+      color: white; }
+      .contacts textarea::placeholder:active {
+        color: #1abc9c; }
+    .contacts textarea:focus::placeholder {
+      color: #1abc9c; }
   .contacts .send-form {
     width: 140px;
     height: 47px;
     background-color: #1abc9c;
     color: white;
     border: none; }
+  .contacts .name {
+    grid-area: name; }
+  .contacts .email {
+    grid-area: email; }
+  .contacts .subject {
+    grid-area: subject; }
+  .contacts .website {
+    grid-area: url; }
+  .contacts .message {
+    grid-area: message; }
+  .contacts .send-form {
+    grid-area: send; }
+  .contacts .right-side-grid {
+    display: grid;
+    width: 535px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-column-gap: 23px;
+    grid-row-gap: 26px;
+    grid-template-areas: "name email" "subject url" "message message" "send ."; }
 
 header {
   background-color: #1abc9c; }
