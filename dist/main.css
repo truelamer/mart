@@ -33,7 +33,8 @@ header {
   height: 45px; }
 
 button {
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
 
 header .container {
   justify-content: space-between;
@@ -155,7 +156,8 @@ header .container {
   .new-collection .products, .featured-products .products, .best-sellers .products, .newsletter .products, .partners .products, .contacts .products {
     justify-content: space-between;
     width: 100%;
-    padding: 0 10px; }
+    padding: 0 10px;
+    margin-top: 10px; }
     .new-collection .products .product-item, .featured-products .products .product-item, .best-sellers .products .product-item, .newsletter .products .product-item, .partners .products .product-item, .contacts .products .product-item {
       width: 236px; }
     .new-collection .products .product-image-with-hover, .featured-products .products .product-image-with-hover, .best-sellers .products .product-image-with-hover, .newsletter .products .product-image-with-hover, .partners .products .product-image-with-hover, .contacts .products .product-image-with-hover {
@@ -236,9 +238,6 @@ header .container {
     justify-content: center;
     align-items: center;
     background-color: white; }
-
-.featured-products .products {
-  margin-top: 10px; }
 
 .promo {
   justify-content: center;
