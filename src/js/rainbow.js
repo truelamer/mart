@@ -9,16 +9,15 @@ function animateWithMargin(direction)
 {
     currentId = $(".carousel-image").attr('id');
 
-
     nextId = + currentId + direction;
     
-    if (nextId > 6)
+    if (nextId > pics.length-1)
     {
         nextId = 0;
     }
     else if (nextId < 0)
     {
-        nextId = 6;
+        nextId = pics.length-1;
     }
 
     if (direction > 0)
@@ -42,6 +41,3 @@ function animateWithMargin(direction)
 let carousel = document.getElementById('carousel-with-margin');
 carousel.children[0].addEventListener('click', function() { animateWithMargin(-1) });
 carousel.children[carousel.children.length - 1].addEventListener('click', function() { animateWithMargin(1) });
-
-
-
