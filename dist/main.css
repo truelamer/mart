@@ -114,8 +114,7 @@ header .container {
     background-repeat: no-repeat;
     background-size: cover; }
   .carousel .first {
-    background-image: url(src/img/1.png);
-    transition: margin 0.4s; }
+    background-image: url(src/img/1.png); }
   .carousel .second {
     background-image: url(src/img/2.png); }
   .carousel .third {
